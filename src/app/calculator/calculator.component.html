@@ -1,0 +1,26 @@
+<div>
+  <form [formGroup]="formGroup" (ngSubmit)="onSubmit()" id="form">
+    <input formControlName="number1" id="number1" type="number" />
+
+    <select formControlName="operator" id="operator">
+      @for (operator of listOperators; track operator) {
+      <option [value]="operator.value">{{ operator.text }}</option>
+      }
+    </select>
+
+    <input formControlName="number2" id="number2" type="number" />
+
+    <button type="submit">Calculer</button>
+
+
+    <button type="button" (click)="init()">Init</button>
+    <span id="result" [ngClass] = "color">{{ resultText }}</span>
+
+    <!---<span[ngClass]="{green:resultat>0, red: resultat<0}">{{ resultText }}</span>-->
+    
+  </form>
+</div>
+<!--difficulties: 
+1. cannot link form at all even though there's an import in ts - solved: needed import { ReactiveFormsModule } from '@angular/forms';
+2. I forgot how to write things without using materials - I forgot about select and options, also thought I needed matInput to connect to the ts
+3. Can't write logic properly in ts, I don't know where to declare variables -->

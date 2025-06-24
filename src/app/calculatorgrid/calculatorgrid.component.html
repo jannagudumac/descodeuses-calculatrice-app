@@ -1,0 +1,15 @@
+<div id="container" class="flex gap-2" >
+  <div id="numbers" class="grid grid-cols-3 gap-2 ">
+    @for(button of listNumbers; track button){
+        <button (click)= "addNumber()" id="numberbutton" [value] ="button.value" mat-flat-button>{{button.text}}</button>
+        
+    }
+    <button mat-flat-button class="col-span-2" type="submit" (click)="onSubmit()">=</button>
+  </div>
+  
+  <div id="operators" class="grid grid-rows-4 gap-2">
+    @for(button of listOperators; track button){
+        <button (click)= "addOperator()" mat-flat-button>{{button.text}}</button>
+    }
+  </div>
+</div>

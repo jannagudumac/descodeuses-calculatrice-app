@@ -1,0 +1,13 @@
+#form{
+    display: flex;
+    gap: 1rem;
+}
+
+
+.green{
+    color:green;
+}
+
+.red{
+    color: red;
+}
