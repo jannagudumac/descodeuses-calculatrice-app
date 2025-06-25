@@ -4,5 +4,5 @@ import { CalculatorgridComponent } from './calculatorgrid/calculatorgrid.compone
 
 export const routes: Routes = [
     {path: 'calculator', component: CalculatorComponent, title: "Calculator"},
-    {path: 'calculatorgrid', component: CalculatorgridComponent, title: "Calculator grid"}
+    {path: '', component: CalculatorgridComponent, title: "Calculator grid"}
 ];
